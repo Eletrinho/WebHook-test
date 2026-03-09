@@ -48,7 +48,7 @@ app.post('/', (req, res) => {
   const timestamp = new Date().toISOString().replace('T', ' ').slice(0, 19);
   console.log(`\n\nWebhook received ${timestamp}\n`);
   console.log(JSON.stringify(req.body, null, 2));
-  sendMessage(`9${req.body.entry[0].changes[0].value.messages[0].from}`, 'Olá, tudo bem?');
+  sendMessage(`55359${req.body.entry[0].changes[0].value.messages[0].from.slice(4)}`, 'Olá, tudo bem?');
   res.status(200).end();
 });
 
